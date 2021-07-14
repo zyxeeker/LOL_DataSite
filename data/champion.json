@@ -1,0 +1,672 @@
+{
+  "top": [
+    {
+      "ename": "Aatrox",
+      "cname": "暗裔剑魔"
+    },
+    {
+      "ename": "Akali",
+      "cname": "离群之刺"
+    },
+    {
+      "ename": "Camille",
+      "cname": "青钢影"
+    },
+    {
+      "ename": "Chogath",
+      "cname": "虚空恐惧"
+    },
+    {
+      "ename": "Darius",
+      "cname": "诺克萨斯之手"
+    },
+    {
+      "ename": "DrMundo",
+      "cname": "祖安狂人"
+    },
+    {
+      "ename": "Fiora",
+      "cname": "无双剑姬"
+    },
+    {
+      "ename": "Gangplank",
+      "cname": "海洋之灾"
+    },
+    {
+      "ename": "Garen",
+      "cname": "德玛西亚之力"
+    },
+    {
+      "ename": "Gnar",
+      "cname": "迷失之牙"
+    },
+    {
+      "ename": "Illaoi",
+      "cname": "海兽祭司"
+    },
+    {
+      "ename": "Irelia",
+      "cname": "刀锋舞者"
+    },
+    {
+      "ename": "Jax",
+      "cname": "武器大师"
+    },
+    {
+      "ename": "Jayce",
+      "cname": "未来守护者"
+    },
+    {
+      "ename": "Kayle",
+      "cname": "正义天使"
+    },
+    {
+      "ename": "Kennen",
+      "cname": "狂暴之心"
+    },
+    {
+      "ename": "Kled",
+      "cname": "暴怒骑士"
+    },
+    {
+      "ename": "Maokai",
+      "cname": "扭曲树精"
+    },
+    {
+      "ename": "MonkeyKing",
+      "cname": "齐天大圣"
+    },
+    {
+      "ename": "Mordekaiser",
+      "cname": "铁铠冥魂"
+    },
+    {
+      "ename": "Nasus",
+      "cname": "沙漠死神"
+    },
+    {
+      "ename": "Ornn",
+      "cname": "山隐之焰"
+    },
+    {
+      "ename": "Renekton",
+      "cname": "荒漠屠夫"
+    },
+    {
+      "ename": "Poppy",
+      "cname": "圣锤之毅"
+    },
+    {
+      "ename": "Quinn",
+      "cname": "德玛西亚之翼"
+    },
+    {
+      "ename": "Riven",
+      "cname": "放逐之刃"
+    },
+    {
+      "ename": "Sett",
+      "cname": "腕豪"
+    },
+    {
+      "ename": "Shen",
+      "cname": "暮光之眼"
+    },
+    {
+      "ename": "Singed",
+      "cname": "炼金术士"
+    },
+    {
+      "ename": "Sion",
+      "cname": "亡灵战神"
+    },
+    {
+      "ename": "Sylas",
+      "cname": "解脱者"
+    },
+    {
+      "ename": "Teemo",
+      "cname": "迅捷斥候"
+    },
+    {
+      "ename": "Tryndamere",
+      "cname": "蛮族之王"
+    },
+    {
+      "ename": "Urgot",
+      "cname": "无畏战车"
+    },
+    {
+      "ename": "Vladimir",
+      "cname": "猩红收割者"
+    },
+    {
+      "ename": "Volibear",
+      "cname": "不灭狂雷"
+    },
+    {
+      "ename": "Yasuo",
+      "cname": "疾风剑豪"
+    },
+    {
+      "ename": "Yorick",
+      "cname": "牧魂人"
+    }
+  ],
+  "jug": [
+    {
+      "ename": "Amumu",
+      "cname": "殇之木乃伊"
+    },
+    {
+      "ename": "Ekko",
+      "cname": "时间刺客"
+    },
+    {
+      "ename": "Elise",
+      "cname": "蜘蛛女皇"
+    },
+    {
+      "ename": "Evelynn",
+      "cname": "痛苦之拥"
+    },
+    {
+      "ename": "Fiddlesticks",
+      "cname": "远古恐惧"
+    },
+    {
+      "ename": "Gragas",
+      "cname": "酒桶"
+    },
+    {
+      "ename": "Graves",
+      "cname": "法外狂徒"
+    },
+    {
+      "ename": "Hecarim",
+      "cname": "战争之影"
+    },
+    {
+      "ename": "Ivern",
+      "cname": "翠神"
+    },
+    {
+      "ename": "JarvanIV",
+      "cname": "德玛西亚皇子"
+    },
+    {
+      "ename": "Jax",
+      "cname": "武器大师"
+    },
+    {
+      "ename": "Karthus",
+      "cname": "死亡颂唱者"
+    },
+    {
+      "ename": "Kayn",
+      "cname": "影流之镰"
+    },
+    {
+      "ename": "Khazix",
+      "cname": "虚空掠夺者"
+    },
+    {
+      "ename": "Kindred",
+      "cname": "永猎双子"
+    },
+    {
+      "ename": "LeeSin",
+      "cname": "盲僧"
+    },
+    {
+      "ename": "MasterYi",
+      "cname": "无极剑圣"
+    },
+    {
+      "ename": "MonkeyKing",
+      "cname": "齐天大圣"
+    },
+    {
+      "ename": "Nidalee",
+      "cname": "狂野女猎手"
+    },
+    {
+      "ename": "Nocturne",
+      "cname": "永恒梦魇"
+    },
+    {
+      "ename": "Nunu",
+      "cname": "雪原双子"
+    },
+    {
+      "ename": "Olaf",
+      "cname": "狂战士"
+    },
+    {
+      "ename": "Rammus",
+      "cname": "披甲龙龟"
+    },
+    {
+      "ename": "RekSai",
+      "cname": "虚空遁地兽"
+    },
+    {
+      "ename": "Rengar",
+      "cname": "傲之追猎者"
+    },
+    {
+      "ename": "Sejuani",
+      "cname": "北地之怒"
+    },
+    {
+      "ename": "Sett",
+      "cname": "腕豪"
+    },
+    {
+      "ename": "Shaco",
+      "cname": "恶魔小丑"
+    },
+    {
+      "ename": "Shyvana",
+      "cname": "龙血武姬"
+    },
+    {
+      "ename": "Skarner",
+      "cname": "水晶先锋"
+    },
+    {
+      "ename": "Sylas",
+      "cname": "解脱者"
+    },
+    {
+      "ename": "Taliyah",
+      "cname": "岩雀"
+    },
+    {
+      "ename": "Trundle",
+      "cname": "巨魔之王"
+    },
+    {
+      "ename": "Udyr",
+      "cname": "兽灵行者"
+    },
+    {
+      "ename": "Vi",
+      "cname": "皮城执法官"
+    },
+    {
+      "ename": "Volibear",
+      "cname": "不灭狂雷"
+    },
+    {
+      "ename": "Warwick",
+      "cname": "祖安怒兽"
+    },
+    {
+      "ename": "XinZhao",
+      "cname": "德邦总管"
+    },
+    {
+      "ename": "Zac",
+      "cname": "生化魔人"
+    }
+  ],
+  "mid": [
+    {
+      "ename": "Ahri",
+      "cname": "九尾妖狐"
+    },
+    {
+      "ename": "AurelionSol",
+      "cname": "铸星龙王"
+    },
+    {
+      "ename": "Akali",
+      "cname": "离群之刺"
+    },
+    {
+      "ename": "Anivia",
+      "cname": "冰晶凤凰"
+    },
+    {
+      "ename": "Annie",
+      "cname": "黑暗之女"
+    },
+    {
+      "ename": "Azir",
+      "cname": "沙漠皇帝"
+    },
+    {
+      "ename": "Cassiopeia",
+      "cname": "魔蛇之拥"
+    },
+    {
+      "ename": "Corki",
+      "cname": "英勇投弹手"
+    },
+    {
+      "ename": "Diana",
+      "cname": "皎月女神"
+    },
+    {
+      "ename": "Ekko",
+      "cname": "时间刺客"
+    },
+    {
+      "ename": "Fizz",
+      "cname": "潮汐海灵"
+    },
+    {
+      "ename": "Galio",
+      "cname": "正义巨像"
+    },
+    {
+      "ename": "Heimerdinger",
+      "cname": "大发明家"
+    },
+    {
+      "ename": "Irelia",
+      "cname": "刀锋舞者"
+    },
+    {
+      "ename": "Kassadin",
+      "cname": "虚空行者"
+    },
+    {
+      "ename": "Katarina",
+      "cname": "不祥之刃"
+    },
+    {
+      "ename": "Leblanc",
+      "cname": "诡术妖姬"
+    },
+    {
+      "ename": "Lissandra",
+      "cname": "冰霜女巫"
+    },
+    {
+      "ename": "Lux",
+      "cname": "光辉女郎"
+    },
+    {
+      "ename": "Malzahar",
+      "cname": "虚空先知"
+    },
+    {
+      "ename": "Neeko",
+      "cname": "万花通灵"
+    },
+    {
+      "ename": "Orianna",
+      "cname": "发条魔灵"
+    },
+    {
+      "ename": "Pantheon",
+      "cname": "不屈之枪"
+    },
+    {
+      "ename": "Qiyana",
+      "cname": "元素女皇"
+    },
+    {
+      "ename": "Rumble",
+      "cname": "机械公敌"
+    },
+    {
+      "ename": "Ryze",
+      "cname": "符文法师"
+    },
+    {
+      "ename": "Sylas",
+      "cname": "解脱者"
+    },
+    {
+      "ename": "Syndra",
+      "cname": "暗黑元首"
+    },
+    {
+      "ename": "Talon",
+      "cname": "刀锋之影"
+    },
+    {
+      "ename": "TwistedFate",
+      "cname": "卡牌大师"
+    },
+    {
+      "ename": "Veigar",
+      "cname": "邪恶小法师"
+    },
+    {
+      "ename": "Velkoz",
+      "cname": "虚空之眼"
+    },
+    {
+      "ename": "Viktor",
+      "cname": "机械先驱"
+    },
+    {
+      "ename": "Vladimir",
+      "cname": "猩红收割者"
+    },
+    {
+      "ename": "Xerath",
+      "cname": "远古巫灵"
+    },
+    {
+      "ename": "Yasuo",
+      "cname": "疾风剑豪"
+    },
+    {
+      "ename": "Zed",
+      "cname": "影流之主"
+    },
+    {
+      "ename": "Ziggs",
+      "cname": "爆破鬼才"
+    },
+    {
+      "ename": "Zoe",
+      "cname": "暮光星灵"
+    }
+  ],
+  "bot": [
+    {
+      "ename": "Aphelios",
+      "cname": "残月之肃"
+    },
+    {
+      "ename": "Ashe",
+      "cname": "寒冰射手"
+    },
+    {
+      "ename": "Caitlyn",
+      "cname": "皮城女警"
+    },
+    {
+      "ename": "Draven",
+      "cname": "荣耀行刑官"
+    },
+    {
+      "ename": "Ezreal",
+      "cname": "探险家"
+    },
+    {
+      "ename": "Jhin",
+      "cname": "戏命师"
+    },
+    {
+      "ename": "Jinx",
+      "cname": "暴走萝莉"
+    },
+    {
+      "ename": "Kaisa",
+      "cname": "虚空之女"
+    },
+    {
+      "ename": "KogMaw",
+      "cname": "深渊巨口"
+    },
+    {
+      "ename": "Kalista",
+      "cname": "复仇之矛"
+    },
+    {
+      "ename": "Lucian",
+      "cname": "圣枪游侠"
+    },
+    {
+      "ename": "MissFortune",
+      "cname": "赏金猎人"
+    },
+    {
+      "ename": "Sivir",
+      "cname": "战争女神"
+    },
+    {
+      "ename": "Tristana",
+      "cname": "麦林炮手"
+    },
+    {
+      "ename": "Twitch",
+      "cname": "瘟疫之源"
+    },
+    {
+      "ename": "Varus",
+      "cname": "惩戒之箭"
+    },
+    {
+      "ename": "Vayne",
+      "cname": "暗夜猎手"
+    },
+    {
+      "ename": "Xayah",
+      "cname": "逆羽"
+    },
+    {
+      "ename": "Yasuo",
+      "cname": "疾风剑豪"
+    }
+  ],
+  "sup": [
+    {
+      "ename": "Alistar",
+      "cname": "牛头酋长"
+    },
+    {
+      "ename": "Bard",
+      "cname": "星界游神"
+    },
+    {
+      "ename": "Blitzcrank",
+      "cname": "蒸汽机器人"
+    },
+    {
+      "ename": "Brand",
+      "cname": "复仇焰魂"
+    },
+    {
+      "ename": "Braum",
+      "cname": "弗雷尔卓德之心"
+    },
+    {
+      "ename": "Janna",
+      "cname": "风暴之怒"
+    },
+    {
+      "ename": "Karma",
+      "cname": "天启者"
+    },
+    {
+      "ename": "Leona",
+      "cname": "曙光女神"
+    },
+    {
+      "ename": "Lulu",
+      "cname": "仙灵女巫"
+    },
+    {
+      "ename": "Lux",
+      "cname": "光辉女郎"
+    },
+    {
+      "ename": "Malphite",
+      "cname": "熔岩巨兽"
+    },
+    {
+      "ename": "MissFortune",
+      "cname": "赏金猎人"
+    },
+    {
+      "ename": "Morgana",
+      "cname": "堕落天使"
+    },
+    {
+      "ename": "Nami",
+      "cname": "唤潮鲛姬"
+    },
+    {
+      "ename": "Nautilus",
+      "cname": "深海泰坦"
+    },
+    {
+      "ename": "Pyke",
+      "cname": "血港鬼影"
+    },
+    {
+      "ename": "Rakan",
+      "cname": "幻翎"
+    },
+    {
+      "ename": "Senna",
+      "cname": "涤魂圣枪"
+    },
+    {
+      "ename": "Sett",
+      "cname": "腕豪"
+    },
+    {
+      "ename": "Sona",
+      "cname": "琴瑟仙女"
+    },
+    {
+      "ename": "Soraka",
+      "cname": "众星之子"
+    },
+    {
+      "ename": "Swain",
+      "cname": "诺克萨斯统领"
+    },
+    {
+      "ename": "TahmKench",
+      "cname": "河流之王"
+    },
+    {
+      "ename": "Taric",
+      "cname": "瓦洛兰之盾"
+    },
+    {
+      "ename": "Thresh",
+      "cname": "魂锁典狱长"
+    },
+    {
+      "ename": "Velkoz",
+      "cname": "虚空之眼"
+    },
+    {
+      "ename": "Xerath",
+      "cname": "远古巫灵"
+    },
+    {
+      "ename": "Yuumi",
+      "cname": "魔法猫咪"
+    },
+    {
+      "ename": "Zilean",
+      "cname": "时光守护者"
+    },
+    {
+      "ename": "Zyra",
+      "cname": "荆棘之兴"
+    }
+  ]
+}

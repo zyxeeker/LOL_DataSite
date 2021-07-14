@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <link rel="stylesheet" href="static/css_rune/normalize.css">
+    <link rel="stylesheet" href="static/perks/css/global.css">
+    <script>
+        var base = document.createElement('a');
+        base.href = location.href.replace(/\#.*$/, '');
+    </script>
+
+</head>
+<body class="i18n-en_US">
+<script>
+    window.dataLayer = [];
+</script>
+
+
+<div class="o-container">
+    <div class="o-inset o-inset--runebuilder">
+        <div id="app" class="u-spacing-20"></div>
+    </div>
+</div>
+
+
+<script>
+    var locale = 'en_US';
+    var language = 'cn';
+    var region = 'na';
+    var environment = 'staging';
+    var versionedAssetPath = 'static/perks';
+    var templateVersion = '';
+    var pagesBasePath = '';
+    var assetMagickPath = '';
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+    var runeBuilderConfig = getUrlParameter('build') || undefined;
+    var siteUrl = 'static/perks';
+    var i18n = {
+        runebuilder: {
+            reset: "Resets",
+            toggle: "Toggle",
+            secondary: {
+                selectSecondary: "选择副系",
+            },
+            selectRune: "选择符文",
+            selectGreater: "选择高级符文",
+            selectKeystone: "选择基石",
+            splash: {
+                title: "副系符文",
+                body: "选择上方的副系以选取副系中的符文",
+            },
+            showDetailedDescriptions: "显示详细描述以供比较（或按住SHIFT键）"
+        }
+    };
+</script>
+<script src="static/js_rune/vendor.js"></script>
+<script src="static/js_rune/main.js"></script>
+<script src="static/js_rune/runeBuilder.js"></script>
+<script>if(typeof(pgvMain) == 'function')pgvMain();</script>
+</body>
+</html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta charset="utf-8" />
+    <title>TEST</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" href="css/tip.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script type="text/javascript" src="js/axios-0.18.0.js"></script>
+    <script>
+        $(function() {
+            $('.sections').fullpage({
+                sectionsColor: ['white', 'white', 'white', 'white', 'white'],
+                'navigation': true,
+                anchors: ['home', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+                afterLoad: function (anchorLink, index) {
+                    var loadedSection = $(this);
+                    //using index
+                    if (index == '2') {
+                        $('#section2').find('.cbanner').show(true);
+                    }
+                    if (index == '3') {
+                        $('#section3').find('.cbanner').show(true);
+                    }
+                    if (index == '4') {
+                        $('#section4').find('.cbanner').show(true);
+                    }
+                    if (index == '5') {
+                        $('#section5').find('.cbanner').show(true);
+                    }
+                    $(".layui-nav-item").eq(index - 1).addClass("layui-this").siblings().removeClass("layui-this");
+                    if (index != 1) {
+                        $('.nav')[0].style.background = 'rgba(77,78,77,0.61)';
+                    } else {
+                        $('.nav')[0].style.background = 'rgba(255, 255, 255 ,0)';
+                    }
+
+                }
+                // onLeave: function (index, direction) {
+                //
+                //     // if (index == '3') {
+                //     //     $('.section3').find('.container').delay(500).animate({
+                //     //         bottom: '-120%'
+                //     //     }, 1500, 'easeOutExpo');
+                //     // }
+                // }
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/layui.css"/>
+    <!--导航栏-->
+    <style type="text/css">
+        .nav {
+            width: 100%;
+            height: 80px;
+            box-shadow: 0 3px 3px 0 #CCC;
+            background: #FFF;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 999;
+            overflow: hidden;
+            transition: 0.3s
+        }
+        .nav.index {
+            background: rgba(255, 255, 255 ,0);
+            box-shadow: 0 0 0 0 rgba(0,0,0,0.05);
+        }
+        .nav.scroll {
+            background: #FFF;
+            box-shadow: 0 3px 3px 0 rgba(0,0,0,0.05);
+            transition: 0.3s
+        }
+        .nav .layui-container {
+            position: relative;
+            transition: all 400ms ease-out;
+        }
+        .nav .nav-logo {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 15px;
+            line-height: 80px;
+        }
+        .nav .nav-list {
+            display: inline-block;
+            height: 80px;
+        }
+        .nav .nav-list button {
+            width: 25px;
+            height: 30px;
+            position: absolute;
+            top: 30px;
+            right: 15px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .nav .nav-list button span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: #f0f0f0;
+            margin-bottom: 6px;
+            transition: 0.5s;
+        }
+        .nav .nav-list button span.spa1 {
+            transform: rotate(45deg);
+        }
+        .nav .nav-list button span.spa3 {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+        .nav .layui-nav {
+            width: 100%;
+            position: absolute;
+            top: 80px;
+            right: 0;
+            color: #000;
+            background: transparent;
+        }
+        .nav .layui-nav .layui-nav-item {
+            display: block;
+            line-height: 60px;
+        }
+        .nav .layui-nav * {
+            font-size: 18px;
+        }
+        .nav .layui-nav .layui-nav-item a {
+            padding: 0 0;
+            color: #f0f0f0;
+        }
+        .nav .layui-nav-bar, .nav .layui-nav .layui-this:after {
+            height: 2px;
+            background-color: #f5c920;
+        }
+        .nav .layui-nav .layui-this a, .nav .layui-nav .layui-nav-item a:hover {
+            color: #f5c920;
+        }
+
+        @media screen and (min-width: 768px) {
+            .nav {
+                max-height: 80px;
+            }
+            .nav.index {
+                background: rgba(255, 255, 255 ,0);
+            }
+            .nav .nav-list button {
+                display: none;
+            }
+            .nav .layui-nav {
+                width: auto;
+                position: absolute;
+                top: 0;
+                padding: 0 5px;
+                border-radius: 0;
+                margin: 0;
+            }
+            .nav .layui-nav .layui-nav-item {
+                display: inline-block;
+                margin: 0 15px;
+                line-height: 80px;
+            }
+        }
+    </style>
+
+<!--英雄-->
+	<style>
+		@font-face
+		{
+		font-family: myFirstFont;
+		src: url('css/beaufortforlol-heavyitalic.otf');
+		}
+		.cbanner{
+			margin: 0px;
+			padding-top: 70px;
+            display: none;
+		}
+		.cbanner h1
+		{
+			margin: 0px;
+		font-family:myFirstFont;
+		font-size: 5vw;
+		}
+		.cbanner h4{
+			margin: 0px;
+			text-align: center;
+			font-size: 1vw;
+			padding-bottom: 25px;
+		}
+		
+		
+ 		.focus-in-expand-fwd {
+			-webkit-animation: focus-in-expand-fwd 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+		    animation: focus-in-expand-fwd 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+			}
+
+		@-webkit-keyframes focus-in-expand-fwd {
+		  0% {
+		    letter-spacing: -0.5em;
+		    -webkit-transform: translateZ(-800px);
+		            transform: translateZ(-800px);
+		    opacity: 0;
+		  }
+		  100% {
+		    -webkit-transform: translateZ(0);
+		            transform: translateZ(0);
+		    -webkit-filter: blur(0);
+		            filter: blur(0);
+		    opacity: 1;
+		  }
+		}
+		@keyframes focus-in-expand-fwd {
+		  0% {
+		    letter-spacing: -0.5em;
+		    -webkit-transform: translateZ(-800px);
+		            transform: translateZ(-800px);
+		    opacity: 0;
+		  }
+		  100% {
+		    -webkit-transform: translateZ(0);
+		            transform: translateZ(0);
+		    opacity: 1;
+		  }
+		}
+
+    </style>
+
+</head>
+
+<body>
+    <div class="nav index" style="height: 80px;">
+        <div class="layui-container">
+            <div class="nav-logo"> <a href="index.html"> <img src="image/logo.png" alt="网络公司"> </a> </div>
+            <div class="nav-list">
+                <button id="btn"> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
+                <ul class="layui-nav" lay-filter="">
+                    <li class="layui-nav-item layui-this" onclick="document.getElementById('btn').click();"><a href="#home">主页</a></li>
+                    <li class="layui-nav-item" onclick="document.getElementById('btn').click();"><a href="#secondPage">TEST</a></li>
+                    <li class="layui-nav-item" onclick="document.getElementById('btn').click();"><a href="#thirdPage">符文</a></li>
+                    <li class="layui-nav-item" onclick="document.getElementById('btn').click();"><a href="#fourthPage">英雄</a></li>
+                    <li class="layui-nav-item" onclick="document.getElementById('btn').click();"><a href="#lastPage">物品</a></li>
+                    <span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="sections">
+        <div class="section" id="section1">
+            <div class="container">
+                <div class="banner_slide active">
+                    <div class="banner" style="background-image: url(image/banner1.png);"></div>
+                    <div class="block_txt">
+                        <h4> Welcome to this web</h4>
+                        <h2>欢迎来到<span>英雄联盟</span>数据站</h2>
+                        <h3>
+                            <p>欢迎各位召唤师</p>
+                        </h3>
+                    </div>
+                </div>
+                <div class="banner_slide">
+                    <div class="banner" style="background-image: url(image/banner2.png);"></div>
+                    <div class="block_txt">
+                        <div class="block_txt">
+                            <h4>Find what you want</h4>
+                            <h2>找到<span>你想要的</span>数据</h2>
+                            <h3>英雄、TFT、地图等等数据应有尽有</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner_slide">
+                    <div class="banner" style="background-image: url(image/banner3.png);"></div>
+                    <div class="block_txt">
+                        <h4> </h4>
+                        <h2><span>为了简洁</span><br>本站提供一站式查询</h2>
+                        <h3>For Concise  |  For Game  |  For Data  |  For Future</h3>
+                    </div>
+                </div>
+                <div class="banner_slide">
+                    <div class="banner" style="background-image: url(image/banner4.png);"></div>
+                    <div class="block_txt">
+                        <h4> </h4>
+                        <h2>召唤师们的聚集地</h2>
+                        <h3>弗雷尔卓德将会在次统一！(魄罗😋)</h3>
+                    </div>
+                </div>
+                <div class="banner_slide">
+                    <div class="banner" style="background-image: url(image/banner5.png);"></div>
+                    <div class="block_txt">
+                        <h4>  </h4>
+                        <h2>一直在更新 不会落下</h2>
+                        <h3>Updating...</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="circle" style="display: block">
+                <b class="current"></b>
+                <b></b>
+                <b></b>
+                <b></b>
+                <b></b>
+            </div>
+
+        </div>
+
+        <div class="section" id="section2">
+
+        	
+        </div>
+
+        <div class="section" id="section3" style="display: flex;overflow-y: scroll;background: url(image/rune-back.jpg) no-repeat top center;">
+        	<div class="cbanner" style="position: absolute;left: 43%;bottom: 150px">
+				<h1 class="focus-in-expand-fwd" style="text-align: center;color: white;">RUNE</h1>
+				<h4 style="color: white;">选择你自己的路</h4>
+			</div>
+<!--            <div class="test" style="display: none">-->
+                <div id="app_1" class="container">
+                  <card data-image="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/preseason-2018/en_US/a6708b7ae3dbc0b25463f9c8e259a513d2c4c7e6/assets/img/customizer/8000/stripe.jpg">
+                    <h1 slot="header">精密</h1>
+                    <p slot="content">成为一个传说<br>强化攻击和持续伤害</p>
+                  </card>
+                  <card data-image="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/preseason-2018/en_US/a6708b7ae3dbc0b25463f9c8e259a513d2c4c7e6/assets/img/customizer/8100/stripe.jpg">
+                    <h1 slot="header">主宰</h1>
+                    <p slot="content">猎杀并消灭猎物<br>爆发伤害并前往目标</p>
+                  </card>
+                  <card data-image="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/preseason-2018/en_US/a6708b7ae3dbc0b25463f9c8e259a513d2c4c7e6/assets/img/customizer/8200/stripe.jpg">
+                    <h1 slot="header">巫术</h1>
+                    <p slot="content">释放毁灭<br>强化技能和资源控制</p>
+                  </card>
+                  <card data-image="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/preseason-2018/en_US/a6708b7ae3dbc0b25463f9c8e259a513d2c4c7e6/assets/img/customizer/8400/stripe.jpg">
+                    <h1 slot="header">坚决</h1>
+                    <p slot="content">永生<br>耐久和控制</p>
+                  </card>
+                  <card data-image="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/preseason-2018/en_US/a6708b7ae3dbc0b25463f9c8e259a513d2c4c7e6/assets/img/customizer/8300/stripe.jpg">
+                    <h1 slot="header">启迪</h1>
+                    <p slot="content">智胜区区凡人<br>创造性的工具并弯曲规则</p>
+                  </card>
+                </div>
+        </div>
+        
+        
+        <div class="section" id="section4" style="display: flex;overflow-y: scroll;background-image: url(image/background.png);background-repeat: no-repeat;background-size: cover;">
+			<div class="cbanner">
+				<h1 class="focus-in-expand-fwd" style="text-align: center;color: white;">CHAMPIONS</h1>
+				<h4 style="color: white;">找到你想了解的英雄</h4>
+			</div>
+
+ 			<div id="details">
+				<div id="border">
+				    <div id="filter">
+				    	<button v-on:click="cposition('top')">上单</button>
+				    	<button v-on:click="cposition('jug')">打野</button>
+				    	<button v-on:click="cposition('mid')">中单</button>
+				    	<button v-on:click="cposition('bot')">ADC</button>
+				    	<button v-on:click="cposition('sup')">辅助</button>
+				    </div>
+				</div>
+				<div id="app" :key="menuKey">
+					<div class="champion moveUpBox" v-for="(item,index) in info">
+				    	<div class="rhombus"></div>
+				        <img :src="'image/tiles/'+ item.ename +'.webp'">
+				        <div class="title">
+				            <span>
+				                {{ item.cname }}
+				            </span>
+				        </div>
+				    </div>
+		       </div>
+	       	</div>
+    	</div>
+    	
+    	<div class="section" id="section5">
+    		<div class="cbanner">
+				<h1 class="focus-in-expand-fwd" style="text-align: center;">ITEMS</h1>
+				<h4>找到你想了解的装备</h4>
+			</div>
+    	
+    	</div>
+		
+
+
+ 	<script type="text/javascript">
+		const VM = new Vue({
+			el: '#details',
+			data () {
+		    return {
+			    details: null,
+			    info: null,
+			    menuKey: 0,
+				}
+			},
+			mounted () {
+				axios
+				.get('data/champion.json')
+				.then(response => (
+		      	this.details = response.data,
+		      	console.log(this.details)
+		      ))
+		      .catch(
+		      	function (error) { // 请求失败处理
+		    		console.log(error);
+		    	});
+		  },
+		  methods:{
+		  	cposition:function (str){
+		  		++this.menuKey;
+				console.log(this.details[str])
+		  		return this.info = this.details[str];
+		  	},
+		  }
+		})
+    </script>
+	
+<!-- 	<script>
+		const data = new Vue({
+			el:"#test",
+			data () {
+				return {
+					detail: null,
+					info: null,
+				}
+			},
+			mounted () {
+				axios
+			    .get('data/runesReforged.json')
+			    .then(response => (
+			    	this.detail = response.data,
+					this.info = this.detail[0],
+			    	console.log(this.detail)
+			    ))
+			    .catch(
+			    	function (error) { // 请求失败处理
+			  		console.log(error);
+			  	});
+			},
+			methods:{
+				runeNum:function (int){
+					console.log(this.detail[int])
+					return this.info = this.detail[int];
+				},
+			}
+		})
+	</script> -->
+
+
+	<!--<script type="text/javascript">
+		new Vue({
+		  el: '#app',
+		  data () {
+		    return {
+		      info: null
+		    }
+		  },
+		  mounted () {
+		    axios
+		      .get('data/champion.json')
+		      .then(response => (this.info = response.data))
+		      .catch(function (error) { // 请求失败处理
+		        console.log(error);
+		      });
+		  }
+		})
+    </script>-->
+	<script>
+		Vue.config.devtools = true;
+		
+		Vue.component('card', {
+		template: `
+		<div class="card-wrap"
+		  @mousemove="handleMouseMove"
+		  @mouseenter="handleMouseEnter"
+		  @mouseleave="handleMouseLeave"
+		  ref="card">
+		  <div class="card"
+			:style="cardStyle">
+			<div class="card-bg" :style="[cardBgTransform, cardBgImage]"></div>
+			<div class="card-info">
+			  <slot name="header"></slot>
+			  <slot name="content"></slot>
+			</div>
+		  </div>
+		</div>`,
+		mounted() {
+		this.width = this.$refs.card.offsetWidth;
+		this.height = this.$refs.card.offsetHeight;
+		},
+		props: ['dataImage'],
+		data: () => ({
+		width: 0,
+		height: 0,
+		mouseX: 0,
+		mouseY: 0,
+		mouseLeaveDelay: null }),
+		
+		computed: {
+		mousePX() {
+		  return this.mouseX / this.width;
+		},
+		mousePY() {
+		  return this.mouseY / this.height;
+		},
+		cardStyle() {
+		  const rX = this.mousePX * 30;
+		  const rY = this.mousePY * -30;
+		  return {
+			transform: `rotateY(${rX}deg) rotateX(${rY}deg)` };
+		},
+
+		cardBgTransform() {
+		  const tX = this.mousePX * -40;
+		  const tY = this.mousePY * -40;
+		  return {
+			transform: `translateX(${tX}px) translateY(${tY}px)` };
+
+		},
+		cardBgImage() {
+		  return {
+			backgroundImage: `url(${this.dataImage})` };
+		
+		} },
+		methods: {
+		handleMouseMove(e) {
+		    if (document.body.clientWidth > 768) {
+                this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width / 2;
+                this.mouseY = e.pageY - this.$refs.card.offsetTop - this.height / 2;
+            }
+		},
+		handleMouseEnter() {
+            if (document.body.clientWidth > 768)
+                clearTimeout(this.mouseLeaveDelay);
+		},
+		handleMouseLeave() {
+            if (document.body.clientWidth > 768) {
+                this.mouseLeaveDelay = setTimeout(() => {
+                    this.mouseX = 0;
+                    this.mouseY = 0;
+                }, 1000);
+            }
+		}
+		}
+		});
+		const app = new Vue({
+		el: '#app_1' });
+	</script>
+
+    <script type="text/javascript">
+        var i = 0;
+        var timer;
+        $(function(){
+            $(".banner_slide").eq(0).show().siblings().hide();
+            start();
+            $("b").hover(function(){
+                clearInterval(timer);
+                i = $(this).index();
+                change();
+            }, function(){
+                start();
+            });
+        });
+        function start(){
+            timer = setInterval(function(){
+                i++;
+                if(i == 5){
+                    i = 0;
+                }
+                change();
+            }, 5000);
+        }
+        function change(){
+            $(".banner_slide").eq(i).fadeIn(300).siblings().stop(true, true).fadeOut(300);
+            $(".banner_slide").eq(i).addClass("active").siblings().removeClass("active");
+            $("b").eq(i).addClass("current").siblings().removeClass("current");
+        }
+    </script>
+
+
+    <script src="https://www.layuicdn.com/layui-v2.5.6/layui.js"></script>
+    <script>
+        //一般直接写在一个js文件中
+        layui.use(['jquery', 'element', 'carousel'], function(){
+            var $ = layui.jquery
+                ,element = layui.element
+                ,carousel = layui.carousel
+
+            //滚动监听
+            $(window).scroll(function() {
+                var scr=$(document).scrollTop();
+                scr > 0 ? $(".nav").addClass('scroll') : $(".nav").removeClass('scroll');
+            });
+
+            //导航切换
+            var btn = $('.nav').find('.nav-list').children('button')
+                ,spa = btn.children('span')
+                ,ul = $('.nav').find('.nav-list').children('.layui-nav');
+            btn.on('click', function(tmp){
+                if(!$(spa[0]).hasClass('spa1')){
+                    spa[0].className = 'spa1';
+                    spa[1].style.display = 'none';
+                    spa[2].className = 'spa3';
+                    $('.nav')[0].style.background = 'rgba(77,78,77,0.61)';
+                    $('.nav')[0].style.height = 90 + ul[0].offsetHeight + 'px';
+                }else{
+                    spa[0].className = '';
+                    spa[1].style.display = 'block';
+                    spa[2].className = '';
+                    if(location.hash=='#home'){
+                        $('.nav')[0].style.background = 'rgba(255,255,255,0)';
+                    }
+                    else {
+                        $('.nav')[0].style.background = 'rgba(77,78,77,0.61)';
+                    }
+                    $('.nav')[0].style.height = 80 + 'px';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+@-webkit-keyframes scale-bg{
+    from{
+        -webkit-transform:scale(1.2);
+        transform:scale(1.2);
+    }
+    to{
+        -webkit-transform:scale(1);
+        transform:scale(1);
+    }
+}
+@keyframes scale-bg{
+    from{
+        -webkit-transform:scale(1.2);
+        transform:scale(1.2);
+    }
+    to{
+        -webkit-transform:scale(1);
+        transform:scale(1);
+    }
+}
+
+.banner {
+    position: fixed;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+    -webkit-animation:scale-bg 6s linear forwards;
+}
+
+.banner_slide .block_txt {
+    position: relative;
+    margin: 0 auto;
+    top: 45%;
+    opacity: 0;
+    transform: translateY(40px);
+    -webkit-transform: translateY(40px);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.banner_slide.active .block_txt {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition-delay: 100ms;
+    transition-delay: 100ms;
+}
+
+.banner_slide .block_txt h4{
+    margin: 10px 0;
+    font-weight: normal;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    font-family: COCO;
+}
+
+.banner_slide .block_txt h2{
+    margin-bottom: auto;
+    margin-top: auto;
+    color: #fff;
+    font-size: 70px;
+    font-weight: bold;
+    text-align:center;
+    letter-spacing:5px;
+}
+
+.banner_slide .block_txt h2 span{
+    margin-bottom: auto;
+    margin-top: auto;
+    color: #f5c920;
+    display: inline-block;
+    letter-spacing: 5px;
+}
+
+.banner_slide .block_txt h3{
+    margin: 10px 0;
+    font-weight: normal;
+    color: #fff;
+    font-size: 22px;
+    text-align:center;
+    letter-spacing: 3px;
+}
+
+.banner_slide .block_txt p{
+    margin: 10px 0;
+    font-weight: normal;
+    color: #fff;
+    font-size: 22px;
+    text-align:center;
+}
+
+.banner_slide{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.banner:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/*下面小圆点，使用绝对定位，位于图片的正下方*/
+.circle {
+    width: 200px;
+    height: 14px;
+    position: relative;
+    top: 40%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+/*每个小圆点的样式*/
+.circle b {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: #000;
+    border-radius: 50%;
+    margin: 10px;
+}
+/*小圆点的当前样式，也是鼠标移上去的样式*/
+.circle .current {
+    background-color: #fff;
+}
+
+
+/*英雄页面*/
+.rhombus {
+    position: relative;
+    top: -15px;
+    right: -210px;
+    width: 30px;
+    height: 30px;
+    transform: rotateZ(45deg);
+    /* background: rgb(6, 28, 37); */
+    background: white;
+    z-index: 10;
+    transition: all 0.5s;
+}
+
+.champion {
+    float: left;
+    margin: 15px;
+    width: 224px;
+    height: 320px;
+    /* border: 2px solid red; */
+    overflow: hidden;
+}
+.champion img {
+    position: relative;
+    top: -45px;
+    left: -13px;
+    width: 250px;
+    height: auto;
+    /* max-width: 100%;
+    max-height: 100%; */
+    cursor: pointer;
+    transition: transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+}
+.champion img:hover{
+    transform: scale3d(0.9, 0.9, 1);
+}
+.champion:hover .rhombus{
+    transform: translate(20px,-20px);
+}
+.champion .title {
+    height: 25%;
+    top: -65px;
+    position: relative;
+    background-color: rgb(6, 28, 37);
+}
+.champion .title span {
+    position: absolute;
+    line-height:65px;
+    /* margin-top: 15px; */
+    margin-left: 10px;
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/*符文卡片*/
+.container {
+    padding: 250px 80px 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.card-wrap {
+    margin: 10px;
+    transform: perspective(800px);
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+.card-wrap:hover .card-info {
+    transform: translateY(0);
+}
+.card-wrap:hover .card-info p {
+    opacity: 1;
+}
+.card-wrap:hover .card-info, .card-wrap:hover .card-info p {
+    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.card-wrap:hover .card-info:after {
+    transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 1;
+    transform: translateY(0);
+}
+.card-wrap:hover .card-bg {
+    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0.8;
+}
+.card-wrap:hover .card {
+    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px, rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset white 0 0 0 6px;
+}
+
+.card {
+    position: relative;
+    flex: 0 0 240px;
+    width: 240px;
+    height: 320px;
+    background-color: #333;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+    transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.card-bg {
+    opacity: 0.5;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    pointer-events: none;
+}
+
+.card-info {
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    transform: translateY(40%);
+    transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.card-info p {
+    opacity: 0;
+    text-shadow: black 0 2px 3px;
+    transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.card-info * {
+    position: relative;
+    z-index: 1;
+}
+/*		.card-info:after {
+		  content: "";
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  z-index: 0;
+		  width: 100%;
+		  height: 100%;
+		  background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+		  background-blend-mode: overlay;
+		  opacity: 0;
+		  transform: translateY(100%);
+		  transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+		}*/
+
+.card-info h1 {
+    font-family: "Playfair Display";
+    font-size: 36px;
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+}
+@media screen and (max-width: 768px) {
+    .container {
+        justify-content: flex-start;
+    }
+
+}
