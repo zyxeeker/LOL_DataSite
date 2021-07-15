@@ -352,17 +352,15 @@
 				<h4 style="color: white;">找到你想了解的英雄</h4>
 			</div>
 
- 			<div id="details">
-				<div id="border">
-				    <div id="filter">
-				    	<button v-on:click="cposition('top')">上单</button>
-				    	<button v-on:click="cposition('jug')">打野</button>
-				    	<button v-on:click="cposition('mid')">中单</button>
-				    	<button v-on:click="cposition('bot')">ADC</button>
-				    	<button v-on:click="cposition('sup')">辅助</button>
-				    </div>
+ 			<div class="champs" id="details">
+				<div class="champs_filter">
+					<button v-on:click="cposition('top')">上单</button>
+					<button v-on:click="cposition('jug')">打野</button>
+					<button v-on:click="cposition('mid')">中单</button>
+					<button v-on:click="cposition('bot')">ADC</button>
+					<button v-on:click="cposition('sup')">辅助</button>
 				</div>
-				<div id="app" :key="menuKey">
+				<div class="champ" id="app" :key="menuKey">
 					<div class="champion moveUpBox" v-for="(item,index) in info">
 				    	<div class="rhombus"></div>
 				        <img :src="'image/tiles/'+ item.ename +'.webp'">

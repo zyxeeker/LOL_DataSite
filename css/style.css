@@ -137,6 +137,21 @@
 
 
 /*英雄页面*/
+.champs{
+	display: flex;
+}
+
+.champs_filter{
+	display: flex;
+	flex-direction: column;
+}
+
+.champ{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
 .rhombus {
     position: relative;
     top: -15px;
@@ -151,7 +166,7 @@
 }
 
 .champion {
-    float: left;
+    /* float: left; */
     margin: 15px;
     width: 224px;
     height: 320px;
