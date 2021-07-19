@@ -1,0 +1,129 @@
+{
+  "Domination": {
+    "des": "爆发伤害并前往目标",
+    "runes": [
+      {
+        "key": "Electrocute",
+        "name": "电刑",
+        "img": "image/rune/Electrocute.png",
+        "des": "在3秒内用3个独立的攻击或技能命中一位英雄时，会造成额外的自适应伤害。"
+      },
+      {
+        "key": "Predator",
+        "name": "掠食者",
+        "img": "image/rune/Predator.png",
+        "des": "为你的鞋子添加一个主动效果，此效果可提供一个巨量移动速度加成，并使你的下次攻击或技能造成额外的自适应伤害。"
+      },
+      {
+        "key": "DarkHarvest",
+        "name": "黑暗收割",
+        "img": "image/rune/DarkHarvest.png",
+        "des": "伤害一名低生命值的英雄时会造成自适应伤害并从该猎物身上收割灵魂。"
+      },
+      {
+        "key": "HailOfBlades",
+        "name": "丛刃",
+        "img": "image/rune/HailOfBlades.png",
+        "des": "在攻击敌方英雄时，提供大幅攻击速度给最先的3次攻击。"
+      }
+    ]
+  },
+  "Inspiration": {
+    "des": "创造性的工具并弯曲规则",
+    "runes": [
+      {
+        "key": "GlacialAugment",
+        "name": "冰川增幅",
+        "img": "image/rune/GlacialAugment.png",
+        "des": "你对敌方英雄发起的第一次攻击会使该英雄减速(一段时间内无法重复作用于相同目标)。用主动型装备使敌方英雄减速，还会对着他们发射冻结射线，并创造出一个缓慢消失的减速场。"
+      },
+      {
+        "key": "UnsealedSpellbook",
+        "name": "启封的秘籍",
+        "img": "image/rune/UnsealedSpellbook.png",
+        "des": "在非战斗状态下置换召唤师技能。置换到独特的召唤师技能时将提升你未来进行置换的速率。"
+      },
+      {
+        "key": "MasterKey",
+        "name": "原型：全能石",
+        "img": "image/rune/MasterKey.png",
+        "des": "周期性地提供另一个随机基石符文的单次使用机会。"
+      }
+    ]
+  },
+  "Precision": {
+    "des": "强化攻击和持续伤害",
+    "runes": [
+      {
+        "key": "PressTheAttack",
+        "name": "强攻",
+        "img": "image/rune/PressTheAttack.png",
+        "des": "用3次连续的普攻命中一名敌方英雄时，将使其变为易损状态，造成额外伤害并使所受的来自任意来源的伤害变多，持续6秒。"
+      },
+      {
+        "key": "LethalTempo",
+        "name": "致命节奏",
+        "img": "image/rune/LethalTempo.png",
+        "des": "在伤害一名英雄1.5秒后，你会获得大幅攻击速度加成。致命节奏允许你暂时溢出你的攻击速度上限。"
+      },
+      {
+        "key": "FleetFootwork",
+        "name": "迅捷步法",
+        "img": "image/rune/FleetFootwork.png",
+        "des": "攻击和移动会积攒能量层数。在100层时，你的下次攻击会治疗你并提升移动速度。"
+      },
+      {
+        "key": "Conqueror",
+        "name": "征服者",
+        "img": "image/rune/Conqueror.png",
+        "des": "在攻击敌方英雄时提供适应之力。在达到12层后，将你的一部分伤害转化为等额的治疗效果。"
+      }
+    ]
+  },
+  "Resolve": {
+    "des": "耐久和控制",
+    "runes": [
+      {
+        "key": "GraspOfTheUndying",
+        "name": "不灭之握",
+        "img": "image/rune/GraspOfTheUndying.png",
+        "des": "在战斗中每过4秒，你对一个英雄发起的下一次普攻将会造成额外魔法伤害、治疗你、并永久提升你的生命值。"
+      },
+      {
+        "key": "Aftershock",
+        "name": "余震",
+        "img": "image/rune/Aftershock.png",
+        "des": "在你定身一个敌方英雄后提供防御属性，稍后会在你的周围造成爆发性的魔法伤害。"
+      },
+      {
+        "key": "Guardian",
+        "name": "守护者",
+        "img": "image/rune/Guardian.png",
+        "des": "守护你选作技能目标的友军和那些距离你非常近的友军们。如果你和一个被守护的友军即将承受伤害，那么你们两个都会获得一层护盾。"
+      }
+    ]
+  },
+  "Sorcery": {
+    "des": "强化技能和资源控制",
+    "runes": [
+      {
+        "key": "SummonAery",
+        "name": "召唤：艾黎",
+        "img": "image/rune/SummonAery.png",
+        "des": "你的攻击和技能会向目标派出艾黎，来对敌方英雄造成伤害或为友方英雄套上护盾。"
+      },
+      {
+        "key": "ArcaneComet",
+        "name": "奥术彗星",
+        "img": "image/rune/ArcaneComet.png",
+        "des": "用一个技能对一名英雄造成伤害时，会在其位置处召唤一颗彗星。"
+      },
+      {
+        "key": "PhaseRush",
+        "name": "相位猛冲",
+        "img": "image/rune/PhaseRush.png",
+        "des": "用3个独立的攻击或技能命中一位敌方英雄时，会提供爆发性的移动速度。"
+      }
+    ]
+  }
+}

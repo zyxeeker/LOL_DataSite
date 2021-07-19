@@ -198,22 +198,99 @@
 }
 .champion .title span {
     position: absolute;
-    line-height:65px;
+    line-height: 65px;
     /* margin-top: 15px; */
     margin-left: 10px;
     color: white;
     font-size: x-large;
     font-weight: bolder;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*****************************/
+/*字体*/
+/*des: 每个页面的标题和小标题*/
+/*****************************/
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('beaufortforlol-heavyitalic.otf');
+}
+
+.cbanner {
+    width: 100%;
+    padding-top: 50px;
+    position: absolute;
+    display: none;
+}
+
+.cbanner h1 {
+    margin: 0px;
+    font-family: myFirstFont;
+    font-size: 5vw;
+}
+
+.cbanner h4 {
+    margin: 0px;
+    text-align: center;
+    font-size: 1vw;
+    padding-bottom: 25px;
 }
 
 
+.focus-in-expand-fwd {
+    -webkit-animation: focus-in-expand-fwd 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: focus-in-expand-fwd 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes focus-in-expand-fwd {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-800px);
+        transform: translateZ(-800px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes focus-in-expand-fwd {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-800px);
+        transform: translateZ(-800px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+
+/*****************************/
+/*符文*/
+/*des: 符文页面*/
+/*****************************/
+#rune .detail {
+    height: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
 /*符文卡片*/
 .container {
-    padding: 250px 80px 40px;
+    padding: 225px 80px 40px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+    transform: perspective(0) translate3d(0, 0, 5px);
 }
 
 .card-wrap {
@@ -246,8 +323,6 @@
 }
 
 .card {
-    position: relative;
-    flex: 0 0 240px;
     width: 240px;
     height: 320px;
     background-color: #333;
@@ -277,7 +352,7 @@
     position: absolute;
     bottom: 0;
     color: #fff;
-    transform: translateY(40%);
+    transform: translateY(30%);
     transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .card-info p {
@@ -285,34 +360,230 @@
     text-shadow: black 0 2px 3px;
     transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
+
 .card-info * {
     position: relative;
     z-index: 1;
 }
-/*		.card-info:after {
-		  content: "";
-		  position: absolute;
-		  top: 0;
-		  left: 0;
-		  z-index: 0;
-		  width: 100%;
-		  height: 100%;
-		  background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
-		  background-blend-mode: overlay;
-		  opacity: 0;
-		  transform: translateY(100%);
-		  transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-		}*/
 
 .card-info h1 {
     font-family: "Playfair Display";
-    font-size: 36px;
+    font-size: 35px;
     font-weight: 700;
     text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 1300px) {
     .container {
+        padding-right: 250px;
         justify-content: flex-start;
     }
 
 }
+
+.rune-list {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    transform: perspective(0) translate3d(0, 0, 10px);
+}
+
+.rune-list .content {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: #f0f0f0;
+}
+
+.rune-list .title {
+    font-size: 150%;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+
+.rune-list h1 {
+    font-size: 125%;
+    margin: 0 0;
+    font-weight: bold;
+}
+
+.rune-list p {
+    font-size: 100%;
+    margin: 10px 0;
+}
+
+.rune-list .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rune-list .box img {
+    height: 100px;
+}
+
+.rune-list .box .detail {
+    display: flex;
+    flex-direction: row;
+}
+
+.rune-list .box .des {
+    display: flex;
+    flex-direction: column;
+}
+
+.rune-list .close {
+    color: #aaa;
+    line-height: 20px;
+    font-size: 80%;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 10px;
+    width: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.rune-list .close:before {
+    content: "\2716";
+}
+
+.rune-list .close:hover {
+    color: black;
+}
+
+.rune-list > div {
+    border-radius: 1rem;
+}
+
+.rune-list div:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+{
+    opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .rune-list .content {
+        width: 300px;
+        top: 55%;
+    }
+
+}
+
+/* button */
+.rune-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.rune-list button {
+    background: rgb(0, 172, 238);
+    background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+
+}
+
+.rune-list button span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.rune-list button:before, button:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: rgba(2, 126, 251, 1);
+    transition: all 0.3s ease;
+}
+
+.rune-list button:before {
+    height: 0%;
+    width: 2px;
+}
+
+.rune-list button:after {
+    width: 0%;
+    height: 2px;
+}
+
+.rune-list button:hover {
+    background: transparent;
+    box-shadow: none;
+}
+
+.rune-list button:hover:before {
+    height: 100%;
+}
+
+.rune-list button:hover:after {
+    width: 100%;
+}
+
+.rune-list button span:hover {
+    color: rgba(2, 126, 251, 1);
+}
+
+.rune-list button span:before, button span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: rgba(2, 126, 251, 1);
+    transition: all 0.3s ease;
+}
+
+.rune-list button span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.rune-list button span:after {
+    width: 0%;
+    height: 2px;
+}
+
+.rune-list button span:hover:before {
+    height: 100%;
+}
+
+.rune-list button span:hover:after {
+    width: 100%;
+}
+
+/*RunePage END**/
