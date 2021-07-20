@@ -383,7 +383,8 @@
 
 .rune-list {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+	background: url(../image/runes-bg-top.jpg) no-repeat center center;
+	background-size: cover;
     top: 0;
     right: 0;
     bottom: 0;
@@ -399,13 +400,27 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 2em;
-    background: #f0f0f0;
+	background: url(../image/rune/Domination.webp) no-repeat center center;
+	background-size: cover;
+    /* background: #f0f0f0; */
+}
+.rune-list .content::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: -1;
+	border: 1px solid #6a4e29;
 }
 
 .rune-list .title {
     font-size: 150%;
     padding-bottom: 15px;
     font-weight: bold;
+	color: whitesmoke;
 }
 
 .rune-list h1 {
@@ -423,6 +438,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+	color: whitesmoke;
 }
 
 .rune-list .box img {
@@ -437,31 +453,6 @@
 .rune-list .box .des {
     display: flex;
     flex-direction: column;
-}
-
-.rune-list .close {
-    color: #aaa;
-    line-height: 20px;
-    font-size: 80%;
-    position: absolute;
-    right: 10px;
-    text-align: center;
-    top: 10px;
-    width: 20px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.rune-list .close:before {
-    content: "\2716";
-}
-
-.rune-list .close:hover {
-    color: black;
-}
-
-.rune-list > div {
-    border-radius: 1rem;
 }
 
 .rune-list div:not(:last-of-type) {
@@ -485,105 +476,76 @@
 
 }
 
-/* button */
-.rune-btn {
-    width: 130px;
-    height: 40px;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-    7px 7px 20px 0px rgba(0, 0, 0, .1),
-    4px 4px 5px 0px rgba(0, 0, 0, .1);
-    outline: none;
+.rune-list .read-more-btn a {
+	width: 100px;
+	height: 35px;
+	text-align: center;
+	line-height:35px;
+	border-radius: 6px;
+	color: #0bc4e2;
+	cursor: pointer;
+	display: block;
+	position: relative;
+	border: 2px solid #0bc4e2;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
 }
-
-.rune-list button {
-    background: rgb(0, 172, 238);
-    background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
-    width: 130px;
-    height: 40px;
-    line-height: 42px;
-    padding: 0;
-    border: none;
-
+.rune-list .read-more-btn a:hover {
+	color: #fff !important;
+	background-color: transparent;
+	text-shadow: nthree;
 }
-
-.rune-list button span {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
+.rune-list .read-more-btn a:hover:before {
+	left: 0%;
+	right: auto;
+	width: 100%;
 }
-
-.rune-list button:before, button:after {
-    position: absolute;
-    content: "";
-    right: 0;
-    top: 0;
-    background: rgba(2, 126, 251, 1);
-    transition: all 0.3s ease;
+.rune-list .read-more-btn a:before {
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 0px;
+	z-index: -1;
+	content: '';
+	color: #fff !important;
+	background: #0bc4e2;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
 }
-
-.rune-list button:before {
-    height: 0%;
-    width: 2px;
+.rune-list .back-btn a {
+	width: 100px;
+	height: 35px;
+	text-align: center;
+	line-height:35px;
+	border-radius: 6px;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	position: relative;
+	border: 2px solid #e0b667;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
 }
-
-.rune-list button:after {
-    width: 0%;
-    height: 2px;
+.rune-list .back-btn a:hover {
+	color: #000 !important;
+	background-color: transparent;
+	text-shadow: nfour;
 }
-
-.rune-list button:hover {
-    background: transparent;
-    box-shadow: none;
+.rune-list .back-btn a:hover:before {
+	right: 0%;
+	left: auto;
+	width: 100%;
 }
-
-.rune-list button:hover:before {
-    height: 100%;
+.rune-list .back-btn a:before {
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 0px;
+	z-index: -1;
+	content: '';
+	color: #000 !important;
+	background: #e0b667;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
 }
-
-.rune-list button:hover:after {
-    width: 100%;
-}
-
-.rune-list button span:hover {
-    color: rgba(2, 126, 251, 1);
-}
-
-.rune-list button span:before, button span:after {
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: 0;
-    background: rgba(2, 126, 251, 1);
-    transition: all 0.3s ease;
-}
-
-.rune-list button span:before {
-    width: 2px;
-    height: 0%;
-}
-
-.rune-list button span:after {
-    width: 0%;
-    height: 2px;
-}
-
-.rune-list button span:hover:before {
-    height: 100%;
-}
-
-.rune-list button span:hover:after {
-    width: 100%;
-}
-
 /*RunePage END**/

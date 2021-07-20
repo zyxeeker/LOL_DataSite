@@ -261,8 +261,10 @@
             <transition name="fade">
                 <div class="rune-list" v-if="show">
                     <div class="content">
-                        <a title="Close" v-on:click="close()" class="close"></a>
-                        <h1 class="title">耐久和控制</h1>
+						<div style="display: flex;flex-direction: column;align-items: center;">
+							<h1 class="title">耐久和控制</h1>
+							<img src="image/divider.png">
+						</div>
                         <div class="box">
 
                             <div class="detail">
@@ -294,10 +296,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div style="text-align: center;">
-                            <button class="rune-btn">
-                                <span>Read More</span>
-                            </button>
+                        <div style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: space-evenly;font-size: medium;">
+							<div class="back-btn">
+								<a href="#" v-on:click="close()">返回</a>
+							</div>
+							<div class="read-more-btn">
+								<a href="#">更多</a>
+							</div>
                         </div>
                     </div>
                 </div>
