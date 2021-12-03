@@ -31,7 +31,8 @@
       <Banner/>
     </swiper-slide>
     <swiper-slide>
-      <Banner/>
+      <Patch/>
+      <!--      <Banner/>-->
     </swiper-slide>
     <swiper-slide>
       <Banner/>
@@ -56,12 +57,14 @@ import './style.css';
 // import Swiper core and required modules
 import SwiperCore, {Mousewheel} from "swiper";
 import {ref} from "vue";
+import Patch from "@/page/Patch";
 // install Swiper modules
 SwiperCore.use([Mousewheel]);
 
 export default {
   name: 'App',
   components: {
+    Patch,
     Swiper,
     SwiperSlide,
     Banner,
