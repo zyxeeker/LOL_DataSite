@@ -32,10 +32,9 @@
     </swiper-slide>
     <swiper-slide>
       <Patch/>
-      <!--      <Banner/>-->
     </swiper-slide>
     <swiper-slide>
-      <Banner/>
+      <Rune/>
     </swiper-slide>
     <swiper-slide>
       <Banner/>
@@ -58,6 +57,7 @@ import './style.css';
 import SwiperCore, {Mousewheel} from "swiper";
 import {ref} from "vue";
 import Patch from "@/page/Patch";
+import Rune from "@/page/Rune";
 // install Swiper modules
 SwiperCore.use([Mousewheel]);
 
@@ -68,6 +68,7 @@ export default {
     Swiper,
     SwiperSlide,
     Banner,
+    Rune
   },
   data() {
     return {
