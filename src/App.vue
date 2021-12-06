@@ -37,7 +37,8 @@
       <Rune/>
     </swiper-slide>
     <swiper-slide>
-      <Banner/>
+      <Champion/>
+
     </swiper-slide>
     <swiper-slide>
       <Banner/>
@@ -58,12 +59,14 @@ import SwiperCore, {Mousewheel} from "swiper";
 import {ref} from "vue";
 import Patch from "@/page/Patch";
 import Rune from "@/page/Rune";
+import Champion from "@/page/Champion";
 // install Swiper modules
 SwiperCore.use([Mousewheel]);
 
 export default {
   name: 'App',
   components: {
+    Champion,
     Patch,
     Swiper,
     SwiperSlide,
