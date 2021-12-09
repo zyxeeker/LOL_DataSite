@@ -112,17 +112,11 @@ export default {
 
 .wrap-mask {
   z-index: 1;
-  /*display: flex;*/
-  /*justify-content: center;*/
 }
 
 .v-slogan {
   height: 84px;
   width: auto;
-  /*width: 1020px;*/
-  /*height: 84px;*/
-  /*left: 1920px;*/
-  /*top: 60px;*/
 
   font-family: Maler;
   font-style: normal;
@@ -142,8 +136,6 @@ export default {
 .patch_title {
   position: absolute;
   top: 80%;
-  /*width: 225px;*/
-  /*height: 125px;*/
   font-family: TsangerYuMo;
   font-style: normal;
   font-weight: normal;
@@ -153,7 +145,7 @@ export default {
   justify-content: center;
   align-items: flex-end;
   text-align: center;
-  color: #FFFFFF;
+  color: #D0D0D0;
 
   text-shadow: 0px 4px 50px #000000;
 }

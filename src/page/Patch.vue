@@ -8,7 +8,6 @@
       <span class="patch_title">版本</span>
       <span class="patch_des">改变才是好事</span>
       <Button bk="#0BC6E3" bk-hover="#25DEFC" title="了解更多" style="position:absolute;top: 80%;"/>
-      <!--      <Button bk="#D0A85C" bk-hover="#EDC06B" title="了解更多"/>-->
     </div>
   </div>
 </template>
@@ -59,8 +58,6 @@ export default {
 }
 
 .patch_title {
-  width: 225px;
-  height: 125px;
   font-family: TsangerYuMo;
   font-style: normal;
   font-weight: normal;
@@ -90,15 +87,8 @@ export default {
 }
 
 .v-slogan {
-  /*float: right;*/
-  /*position: absolute;*/
   height: 84px;
   width: auto;
-  /*width: 1020px;*/
-  /*height: 84px;*/
-  /*left: 1920px;*/
-  /*top: 60px;*/
-
   font-family: Maler;
   font-style: normal;
   font-weight: normal;

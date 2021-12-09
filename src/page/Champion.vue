@@ -189,6 +189,15 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: SYST;
+  src: url('../assets/font/syst.ttf');
+}
+
+p {
+  font-family: SYST;
+}
+
 .wrap {
   display: flex;
   justify-content: center;
