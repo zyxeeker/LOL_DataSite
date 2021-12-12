@@ -127,7 +127,7 @@
             <span style="position: absolute" v-bind:key="championName">{{ championName }}</span>
           </transition>
         </button>
-        <button class="more_btn_group read_more">
+        <button class="more_btn_group read_more" @click="toDest">
           <div style="position: relative;">
             <svg width="180" height="55" viewBox="0 0 180 55" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 0H180V43L168 55H0V13L12 0Z" fill="#0BC6E3"/>
@@ -184,6 +184,10 @@ export default {
           break;
       }
     },
+  }, methods: {
+    toDest: function () {
+      this.$router.replace('/champion')
+    }
   }
 }
 </script>
@@ -255,11 +259,7 @@ p {
 }
 
 .role_display {
-  /*display: flex;*/
   flex-direction: column;
-  /*position: absolute;*/
-  /*left: 0;*/
-  /*top: 20%;*/
 }
 
 .champion_detail {
